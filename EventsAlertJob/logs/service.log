@@ -1,0 +1,6 @@
+2018-02-26 03:20:10,257 [main] INFO  com.events.job.ServerEventsLogger - ssafa 
+2018-02-26 03:20:10,481 [main] INFO  com.events.connection.HSQLDatabase - HSQLDB Connection created successfully 
+2018-02-26 03:20:10,504 [main] INFO  com.events.connection.HSQLDatabase - Table Exists 
+2018-02-26 03:20:10,702 [main] INFO  com.events.job.ServerEventsLogger - Id scsmbstgra duration 5ms alert true 
+2018-02-26 03:20:10,709 [main] INFO  com.events.job.ServerEventsLogger - Id scsmbstgrc duration 8ms alert true 
+2018-02-26 03:20:10,710 [main] INFO  com.events.job.ServerEventsLogger - Id scsmbstgrb duration 3ms alert null 

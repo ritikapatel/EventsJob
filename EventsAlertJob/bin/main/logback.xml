@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<Pattern>%d{ISO8601} [%thread] %-5level %logger{35} - %msg %n
+				</Pattern>
+			</layout>
+		</encoder>
+	</appender>
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>C:/Users/ritipate/Documents/Cisco/HSQLDB/logs/service.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>C:/Users/ritipate/Documents/Cisco/HSQLDB/logs/service.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<!-- keep 5 days' worth of history -->
+			<maxHistory>5</maxHistory>
+			<totalSizeCap>10MB</totalSizeCap>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{ISO8601} [%thread] %-5level %logger{35} - %msg %n</pattern>
+		</encoder>
+	</appender>
+	<root level="INFO">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
